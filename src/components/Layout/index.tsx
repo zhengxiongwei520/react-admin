@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import type { MenuProps } from 'antd';
 import { Layout, theme } from 'antd';
 import Breadcrumb from '@/components/Layout/Breadcrumb'
+import UserInfo from '@/components/Layout/UserInfo'
 import Menu from '@/components/Layout/Menu'
 import 'reset-css'
 const { Header, Content, Footer, Sider } = Layout;
@@ -21,8 +22,17 @@ const View: React.FC = () => {
         <Menu></Menu>
       </Sider>
       <Layout className="site-layout">
-        <Header style={{ padding: 0, background: colorBgContainer, paddingLeft: '16px' }}>
+        <Header style={{
+          margin: '0 16px',
+          background: colorBgContainer,
+          padding: '24px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          borderBottom: '1px solid #ccc'
+        }}>
           <Breadcrumb />
+          <UserInfo />
         </Header>
         <Content style={{ margin: '0 16px' }}>
           <div style={{ padding: 24, minHeight: 360, background: colorBgContainer }}>

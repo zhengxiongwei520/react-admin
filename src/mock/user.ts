@@ -115,6 +115,21 @@ const mock: Array<MockMethod> = [
       }
     }
   },
+  {
+    url: '/getUserInfo',
+    method: 'post',
+    response: ({ body }) => {
+      const { data } = body
+      data.id = new Date().getTime()
+      list.push(data)
+
+      return {
+        code: 200,
+        data: null,
+        msg: '新增成功'
+      }
+    }
+  },
 ]
 
 export default mock

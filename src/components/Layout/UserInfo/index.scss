@@ -1,0 +1,29 @@
+.userinfo {
+  .user {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin-right: 8px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+      }
+    }
+
+    .name {
+      font-size: 22px;
+      color: rgb(51, 54, 57);
+      font-weight: 500;
+    }
+  }
+}
