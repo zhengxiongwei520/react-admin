@@ -1,0 +1,271 @@
+@import './_variable.scss';
+@import './animation.scss';
+
+.contetn-item {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin: 20px;
+}
+
+.b-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid $border-color;
+  display: inline-block;
+
+  &:hover {
+    border-color: $hover-primary;
+  }
+
+  &.has-ami {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow: 0 0 0 10px #91caff;
+      transition: 0.66s;
+      opacity: 0;
+    }
+
+    &:active::after {
+      box-shadow: none;
+      opacity: 1;
+      transition: 0s;
+    }
+  }
+
+  // 类型
+  &.b-btn-primary {
+    background-color: $primary;
+    color: #fff;
+    border-color: $primary;
+    position: relative;
+
+    &:hover {
+      background-color: $hover-primary;
+      border-color: $hover-primary;
+    }
+
+    &:active {
+      background-color: $active-primary;
+    }
+
+    &.b-btn-background-ghost {
+      color: $primary;
+      background-color: transparent;
+      border-color: $primary;
+      box-shadow: none;
+
+      &:hover {
+        color: $hover-primary;
+        border-color: $hover-primary;
+      }
+
+      &:active {
+        color: $active-primary;
+        border-color: $active-primary;
+      }
+    }
+
+    &.b-btn-dangerous {
+      background-color: $danger-primary;
+      color: #fff;
+      border-color: $danger-primary;
+      position: relative;
+
+      &:hover {
+        background-color: $hover-danger-primary;
+        border-color: $hover-danger-primary;
+      }
+
+      &:active {
+        background-color: $active-danger-primary;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      border-color: #d9d9d9;
+      color: rgba(0, 0, 0, 0.25);
+      background-color: rgba(0, 0, 0, 0.04);
+      box-shadow: none;
+    }
+  }
+
+  &.b-btn-default {
+    background-color: #fff;
+    border: 1px solid $border-color;
+
+    &:hover {
+      border-color: $hover-primary;
+      color: $primary;
+    }
+
+    &:active {
+      color: $active-primary;
+      border-color: $active-primary;
+    }
+
+    &.b-btn-dangerous {
+      background-color: #fff;
+      border: 1px solid $danger-primary;
+      color: $danger-primary;
+
+      &:hover {
+        border-color: $hover-danger-primary;
+        color: $hover-danger-primary;
+      }
+
+      &:active {
+        color: $active-danger-primary;
+        border-color: $active-danger-primary;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      border-color: #d9d9d9;
+      color: rgba(0, 0, 0, 0.25);
+      background-color: rgba(0, 0, 0, 0.04);
+      box-shadow: none;
+    }
+  }
+
+  &.b-btn-dashed {
+    border: 1px dashed $border-color;
+
+    &:hover {
+      border-color: $hover-primary;
+      color: $hover-primary;
+    }
+
+    &:active {
+      color: $active-primary;
+      border-color: $active-primary;
+    }
+
+    &.b-btn-dangerous {
+      background-color: #fff;
+      border: 1px solid $danger-primary;
+      color: $danger-primary;
+
+      &:hover {
+        border-color: $hover-danger-primary;
+        color: $hover-danger-primary;
+      }
+
+      &:active {
+        color: $active-danger-primary;
+        border-color: $active-danger-primary;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      border-color: #d9d9d9;
+      color: rgba(0, 0, 0, 0.25);
+      background-color: rgba(0, 0, 0, 0.04);
+      box-shadow: none;
+    }
+  }
+
+  &.b-btn-text {
+    border: none;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.06);
+    }
+
+    &:active {
+      background-color: $active-grey;
+    }
+
+    &.b-btn-dangerous {
+      border: none;
+      color: $danger-primary;
+
+      &:hover {
+        background-color: #fff2f0;
+      }
+
+      &:active {
+        background-color: #fff2f0;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.25);
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.b-btn-link {
+    color: $primary;
+    border: none;
+
+    &:hover {
+      color: $hover-primary;
+    }
+
+    &:active {
+      color: $active-primary;
+    }
+
+    &.b-btn-dangerous {
+      color: $danger-primary;
+
+      &:hover {
+        color: $hover-danger-primary;
+      }
+
+      &:active {
+        color: $active-danger-primary;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.25);
+    }
+  }
+
+
+  // 大小
+  &.b-btn-lg {
+    padding: 6px 15px;
+    height: 40px;
+  }
+
+  &.b-btn-md {
+    padding: 4px 15px;
+    height: 32px;
+  }
+
+  &.b-btn-sm {
+    padding: 0 7px;
+    height: 24px;
+  }
+
+  // 加载
+  &.b-btn-loading {
+    cursor: default;
+    opacity: 0.65;
+  }
+
+}
