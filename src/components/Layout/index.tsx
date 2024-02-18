@@ -4,6 +4,7 @@ import { Layout, theme } from 'antd';
 import Breadcrumb from '@/components/Layout/Breadcrumb'
 import UserInfo from '@/components/Layout/UserInfo'
 import Menu from '@/components/Layout/Menu'
+import Tabs from '@/components/Layout/Tags'
 import 'reset-css'
 const { Header, Content, Footer, Sider } = Layout;
 import { Outlet } from 'react-router-dom'
@@ -34,6 +35,7 @@ const View: React.FC = () => {
           <Breadcrumb />
           <UserInfo />
         </Header>
+        <Tabs/>
         <Content style={{ margin: '0 16px' }}>
           <div style={{ padding: 24, minHeight: 360, background: colorBgContainer }}>
             <Outlet />

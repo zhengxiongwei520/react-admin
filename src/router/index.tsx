@@ -42,6 +42,7 @@ interface RouteType {
 function handleMenus(menusList: MenuType[]): RouteType[] {
   return menusList.map(e => ({
     path: e.url,
+    title: e.title,
     element: e.element === 'Layout' ? lazyLoad(e.element || '', 'components') : lazyLoad(e.element || ''),
     children: e?.children.length > 0
       ? handleMenus(e.children)

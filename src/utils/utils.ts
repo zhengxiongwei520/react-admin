@@ -9,7 +9,7 @@ function treeToList<T extends HaschildrenType<T>>(tree: Array<T>): T[] {
   const queue = [...tree]
   while (queue.length) {
     const node = queue.shift()
-    if (node?.children.length) {
+    if (node?.children?.length) {
       queue.push(...node?.children)
     }
     if (node) list.push(node)

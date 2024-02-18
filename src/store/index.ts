@@ -1,5 +1,9 @@
-import { legacy_createStore } from 'redux'
-import reducer  from './reducer'
+import { configureStore } from '@reduxjs/toolkit'
+import tagReducer from './modules/tagSlice'
 
-const store = legacy_createStore(reducer)
-export default store
+
+export default configureStore({
+  reducer: {
+    tag: tagReducer
+  }
+})
