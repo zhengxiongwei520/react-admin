@@ -124,6 +124,7 @@ const Menu: React.FC = function () {
       // console.log(res, 'res')
       setTableData([...res.list])
       setTotal(res.total)
+      console.log(res, 'rerererer')
     })
   }, [fetchMenuListEffect])
 

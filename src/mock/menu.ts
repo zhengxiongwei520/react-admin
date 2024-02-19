@@ -5,6 +5,18 @@ import { MenuType } from '@/types/menu'
 
 let menuTree: Array<MenuType> = [
   {
+    title: '首页',
+    id: '4',
+    url: '/dashboard',
+    element: 'Dashboard',
+    status: '1',
+    parentId: '0',
+    parentName: '',
+    role: '1,2',
+    children: [
+      
+    ]
+  }, {
     title: '系统管理',
     id: '1',
     url: '/system',
