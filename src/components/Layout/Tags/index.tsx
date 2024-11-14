@@ -12,7 +12,7 @@ const Tags: React.FC = () => {
 
   const storeTags = useSelector(state => state.tag.value) // 获取初始值
   const dispatch = useDispatch() // 调用方法的时候要用dispatch包裹
-  console.log(storeTags, 'storetags')
+  // console.log(storeTags, 'storetags')
 
   // const [storeTags, setTags] = useState([
   //   {

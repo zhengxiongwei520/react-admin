@@ -93,6 +93,17 @@ let menuTree: Array<MenuType> = [
         parentId: '2',
         parentName: '组件',
         role: '1,2',
+      },
+      {
+        title: '标签展开',
+        id: '2-2',
+        url: '/comp/expandAndShrink',
+        children: [],
+        element: 'ExpandAndShrink',
+        status: '1',
+        parentId: '2',
+        parentName: '组件',
+        role: '1,2',
       }
     ]
   }

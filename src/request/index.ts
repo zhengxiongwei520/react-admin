@@ -41,7 +41,9 @@ service.interceptors.response.use(
       // return downloadFile(response);
     } else {
       // console.log(data, 'datatatatat')
-      if (code === 200) return data;
+      if (code === 200) {
+        return data;
+      }
       else if (code === 401) {
         // jumpLogin();
       } else {

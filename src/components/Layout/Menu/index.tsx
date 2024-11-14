@@ -63,7 +63,7 @@ const View: React.FC = () => {
   const onOpenChange = (openKeys: string[]) => {
     setOpenKey(openKeys)
   }
-  console.log(location.pathname, location, 'location')
+  // console.log(location.pathname, location, 'location')
   const key = location.pathname
   const lastIndex = key.lastIndexOf('/')
   const okey = key.slice(0, lastIndex)

@@ -22,7 +22,6 @@ const trueLogin: React.FC<FCProps> = (props) => {
     }
     userLogin(user).then((res: AxiosResType) => {
       message.success(`登陆成功...跳转页面中.....`)
-
       if (passwordCheck) {
         // console.log('记住密码')
         Cookies.set('userName', user.userName)
